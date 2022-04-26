@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :splash_screen, only: [:index]
   resources :types, only: [:index, :new, :create] do
-    resources :spendings, only: [:index, :show, :new]
+    resources :spendings, only: [:index, :new, :create]
   end
   # Defines the root path route ("/")
   unauthenticated do
