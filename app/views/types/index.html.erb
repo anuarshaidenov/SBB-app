@@ -1,11 +1,13 @@
 <section class="h-screen flex flex-col">
   <ul class="pt-4 pb-40 container mx-auto w-[95%] grow overflow-auto flex flex-col gap-4">
     <% @types.each do |type| %>
-      <li class="shadow-lg p-4 flex items-start gap-3 bg-white">
-        <img src="<%= type.icon %>" alt="icon" class="w-14 h-14 object-cover" />
-        <span class="grow self-center text-gray-400"><%= type.name%></span>
-        <span class="self-center font-bold">$<%= type.spendings.sum(:amount) %></span>
-      </li>
+      <%= link_to type_spendings_path(type.id) do %>
+        <li class="shadow-lg p-4 flex items-start gap-3 bg-white">
+          <img src="<%= type.icon %>" alt="icon" class="w-14 h-14 object-cover" />
+          <span class="grow self-center text-gray-400"><%= type.name%></span>
+          <span class="self-center font-bold">$<%= type.spendings.sum(:amount) %></span>
+        </li>
+      <% end %>
     <% end %>
   </ul>
   <div class="bg-green-600 py-8 flex items-center justify-center fixed w-full bottom-0 left-0">
