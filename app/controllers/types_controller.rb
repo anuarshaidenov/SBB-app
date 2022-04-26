@@ -1,10 +1,9 @@
 class TypesController < ApplicationController
-  def index
-  end
+  before_action :authenticate_user!
 
-  def new
-  end
+  def index; end
 
-  def create
-  end
+  def new; end
+
+  def create; end
 end
