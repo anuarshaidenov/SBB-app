@@ -1,2 +1,14 @@
-<h1>Types#index</h1>
-<p>Find me in app/views/types/index.html.erb</p>
+<section class="h-screen flex flex-col">
+  <ul class="py-4 container mx-auto w-[95%] grow overflow-auto flex flex-col gap-4">
+    <% @types.each do |type| %>
+      <li class="shadow-lg p-4 flex items-start gap-3 bg-white">
+        <img src="<%= type.icon %>" alt="icon" class="w-14 h-14 object-cover" />
+        <span class="grow self-center text-gray-400"><%= type.name%></span>
+        <span class="self-center font-bold">$<%= type.spendings.sum(:amount) %></span>
+      </li>
+    <% end %>
+  </ul>
+  <div class="bg-green-600 py-8 flex items-center justify-center">
+    <%= link_to "Add new type", new_type_path, class: 'border py-4 px-8 text-white uppercase' %>
+  </div>
+</section>
