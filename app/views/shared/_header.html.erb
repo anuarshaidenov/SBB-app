@@ -1,5 +1,5 @@
 <header class="bg-blue-500 py-4 mx-auto px-2 flex items-center fixed w-full top-0 left-0">
-  <button type="button" class="flex" id="hamburger-btn">
+  <button type="button" class="flex" id="<%= 'hamburger-btn' if current_page?(types_path) or current_page?(root_path) %>">
     <% if current_page?(types_path) or current_page?(root_path) %>
       <ion-icon name="menu-sharp" class="text-2xl text-white"></ion-icon>
     <% elsif current_page?(new_type_spending_path(params[:type_id] || 0)) %>
