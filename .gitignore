@@ -31,6 +31,4 @@
 /config/master.key
 
 node_modules/
-tailwind.css
-/app/assets/builds/*
 !/app/assets/builds/.keep
