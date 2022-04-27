@@ -1,21 +1,23 @@
-<header class="bg-blue-500 py-4 mx-auto px-2 flex items-center absolute w-full top-0 left-0">
+<header class="bg-blue-500 py-4 mx-auto px-2 flex items-center fixed w-full top-0 left-0">
   <button type="button">
-    <% if current_page?(types_path) %>
+    <% if current_page?(types_path) or current_page?(root_path) %>
       <ion-icon name="menu-sharp" class="text-2xl text-white"></ion-icon>
     <% else %>
-      <%= link_to :back do %>
+      <%= link_to root_path do %>
         <ion-icon name="chevron-back-sharp" class="text-2xl text-white"></ion-icon>
       <% end %>
     <% end %>
   </button>
   
   <h1 class="uppercase text-white mx-auto">
-  <% if current_page?(types_path) %>
+  <% if current_page?(types_path) or current_page?(root_path) %>
     Types
   <% elsif current_page?(new_type_path) %>
     Add new type
-  <% elsif current_page?(type_spendings_path) %>
+  <% elsif current_page?(type_spendings_path()) %>
     Spendings
+  <% elsif current_page?(new_type_spending_path()) %>
+    Add New spending
   <% end %>
   </h1>
 </header>

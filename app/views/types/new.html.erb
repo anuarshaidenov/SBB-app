@@ -1,4 +1,4 @@
-<section class="flex flex-col pt-10 h-screen pt-20">
+<section class="flex flex-col pt-16 h-screen">
   <%= form_with model: @type, class: 'flex flex-col items-start w-full grow' do |f| %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.text_field :icon, placeholder: 'Icon link', class: 'border-0 w-full py-4 border-b border-gray-300' %>
