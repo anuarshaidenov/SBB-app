@@ -1,2 +1,9 @@
-<h1>Spendings#new</h1>
-<p>Find me in app/views/spendings/new.html.erb</p>
+<section class="pt-16">
+  <%= form_with model: @spending, url: type_spendings_path, class: 'flex flex-col items-start w-full grow' do |f| %>
+    <%= f.hidden_field :author_id, value: current_user.id %>
+    <%= f.text_field :name, placeholder: 'Name', class: 'border-0 w-full py-4' %>
+    <%= f.number_field :amount, placeholder: 'Amount($)', class: 'border-0 w-full py-4', min: 1%>
+    <%= f.collection_select :type_id, @types, :id, :name, {selected: params['type_id']}, {class: 'border-0 w-full py-4'} %>
+    <%= f.submit "Add new spending", class: 'bg-green-600 w-full text-white py-6' %>
+  <% end %>
+</section>
