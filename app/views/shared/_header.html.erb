@@ -1,5 +1,5 @@
 <header class="bg-blue-500 py-4 mx-auto px-2 flex items-center fixed w-full top-0 left-0">
-  <button type="button" class="flex">
+  <button type="button" class="flex" id="hamburger-btn">
     <% if current_page?(types_path) or current_page?(root_path) %>
       <ion-icon name="menu-sharp" class="text-2xl text-white"></ion-icon>
     <% elsif current_page?(new_type_spending_path(params[:type_id] || 0)) %>
@@ -13,15 +13,27 @@
     <% end %>
   </button>
   
-  <h1 class="uppercase text-white mx-auto pr-6">
-  <% if current_page?(types_path) or current_page?(root_path) %>
-    Types
-  <% elsif current_page?(new_type_path) %>
-    Add new type
-  <% elsif current_page?(type_spendings_path(params[:type_id])) %>
-    Spendings
-  <% elsif current_page?(new_type_spending_path(params[:type_id])) %>
-    Add New spending
+  <% if user_signed_in? %>
+    <h1 class="uppercase text-white mx-auto pr-6">
+    <% if current_page?(types_path) or current_page?(root_path) %>
+      Types
+    <% elsif current_page?(new_type_path) %>
+      Add new type
+    <% elsif current_page?(type_spendings_path(params[:type_id] || 0)) %>
+      Spendings
+    <% elsif current_page?(new_type_spending_path(params[:type_id] || 0)) %>
+      Add New spending
+    <% end %>
+    </h1>
   <% end %>
-  </h1>
 </header>
+<div class="fixed w-full left-0 top-0 bg-transparent z-10 h-screen hidden transition-all" id="backdrop"></div>
+<div id="mobile-menu" class="fixed w-3/4 left-0 top-0 bg-blue-300 z-20 h-screen p-4 flex justify-center items-center -translate-x-full transition-all">
+  <ul>
+    <% if user_signed_in? %>
+    <li><%= button_to "sign out", destroy_user_session_path, method: :delete, class: "text-2xl uppercase"%></li>
+    <% else %>
+    <li><%= link_to "sign in", new_user_session_path, class: "text-2xl uppercase"%></li>
+    <% end %>
+  </ul>
+</div>
