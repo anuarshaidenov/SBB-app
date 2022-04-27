@@ -2,7 +2,7 @@ class SpendingsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @spendings = Type.includes(:spendings).find(params[:type_id]).spendings
+    @spendings = Spending.includes(:type).where(type_id: params[:type_id])
   end
 
   def new
