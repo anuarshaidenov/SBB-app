@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Proxima';
+  src: url('../fonts/Proxima-Font.otf');
+}
+
+body {
+  font-family: 'Proxima', sans-serif;
+}
+
 /*
 
 @layer components {
