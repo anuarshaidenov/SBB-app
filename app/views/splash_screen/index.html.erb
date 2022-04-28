@@ -1,10 +1,11 @@
 <section class="min-h-screen flex flex-col">
-  <div class="py-20 flex justify-center items-center">
+  <div class="py-20 flex flex-col gap-3 justify-center items-center">
     <h1 class="font-bold text-2xl italic">Spendit</h1>
+    <p class="text-sm">The budget app.</p>
   </div>
   <div class="flex flex-col justify-center items-center grow bg-blue-500 gap-4">
-    <%= link_to "sign up", new_user_registration_path, class: 'border text-white font-bold uppercase p-4 text-center w-3/4' %>
-    <span class="text-white text-sm uppercase">or</span>
     <%= link_to "sign in", new_user_session_path, class: 'border text-white font-bold uppercase p-4 text-center w-3/4' %>
+    <span class="text-white text-sm uppercase">or</span>
+    <%= link_to "sign up", new_user_registration_path, class: 'uppercase text-white font-bold' %>
   </div>
 </section>

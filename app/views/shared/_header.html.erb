@@ -28,7 +28,7 @@
   <% end %>
 </header>
 <div class="fixed w-full left-0 top-0 bg-transparent z-10 h-screen hidden transition-all" id="backdrop"></div>
-<div id="mobile-menu" class="fixed w-3/4 left-0 top-0 bg-blue-300 z-20 h-screen p-4 flex justify-center items-center gap-10 -translate-x-full transition-all">
+<div id="mobile-menu" class="fixed w-3/4 left-0 top-0 bg-blue-500 opacity-90 text-white z-20 h-screen p-4 flex justify-center items-center gap-10 -translate-x-full transition-all">
   <% if user_signed_in? %>
     <h3 class="absolute top-10 text-sm">Signed in as <%= current_user.name %></h3>
   <% end %>
