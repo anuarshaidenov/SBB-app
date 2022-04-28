@@ -6,6 +6,14 @@
 <img src="./types-screen.png" width="30%">
 <img src="./spendings-screen.png" width="30%">
 
+## Live Link
+
+[Heroku Link](https://cryptic-hamlet-15463.herokuapp.com/)
+
+## Video Presentation
+
+[Link](https://www.loom.com/share/309b6a8b0bc649f6a0d315c573a2dcc6)
+
 ## Built With
 
 - Ruby
