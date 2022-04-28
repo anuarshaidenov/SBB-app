@@ -12,7 +12,7 @@ RSpec.describe 'SplashScreens', type: :request do
       expect(response).to render_template(:index)
     end
 
-    it "renders correct content" do
+    it 'renders correct content' do
       get root_path
       expect(response.body).to include('Spendit')
       expect(response.body).to include('The budget app')
