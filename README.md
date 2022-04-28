@@ -1,24 +1,90 @@
-# README
+# Spendit - A Mobile Web App.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> **_Spendit_** is a mobile web application where you can manage your budget. Register, add a spending type and keep track of your spendings for each category. It's that simple.
 
-Things you may want to cover:
+<img src="./splash-screen.png" width="30%">
+<img src="./types-screen.png" width="30%">
+<img src="./spendings-screen.png" width="30%">
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby
+- Ruby on Rails
+- Tailwind
 
-* Configuration
+## Getting Started
 
-* Database creation
+- Getting a local copy is simple. Follow the steps below
 
-* Database initialization
+### Install
 
-* How to run the test suite
+- Ruby
+- Ruby on Rails
+- PostgresSQL
+- Rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+### Local Copy
 
-* Deployment instructions
+- Clone the project
 
-* ...
+```
+git clone https://github.com/anuarshaidenov/SBB-app.git
+
+cd SBB-app
+
+```
+
+### Setup
+
+Install gems:
+
+```
+bundle install
+```
+
+Setup database:
+
+```
+rails db:create
+rails db:migrate
+```
+
+### Usage
+
+Start server:
+
+```
+rails server
+```
+
+Visit http://localhost:3000/ in your browser.
+
+### Run tests
+
+```
+rspec
+```
+
+## Authors
+
+👤 **Anuar Shaidenov**
+
+- GitHub: [@anuarshaidenov](https://github.com/anuarshaidenov)
+- Twitter: [@anuarnyi](https://twitter.com/anuarnyi)
+- LinkedIn: [Anuar Shaidenov](https://www.linkedin.com/in/anuar-shaidenov-365a951b8/)
+
+## Credits
+
+Original design by [Gregoire Vella](https://www.behance.net/gregoirevella)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./LICENSE.md) licensed.
