@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Proxima';
+  src: url('../fonts/Proxima-Font.otf');
+}
+
+body {
+  font-family: 'Proxima', sans-serif;
+}
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/

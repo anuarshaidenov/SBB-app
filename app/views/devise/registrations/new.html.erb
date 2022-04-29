@@ -1,0 +1,12 @@
+<section class="pt-16">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: 'flex flex-col items-start w-full grow') do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.text_field :name, placeholder: 'Name', autofocus: true, class: 'border-0 w-full py-4' %>
+  <%= f.email_field :email, autocomplete: "email", placeholder: 'email', class: 'border-0 w-full py-4' %>
+  <%= f.password_field :password, autocomplete: "new-password", placeholder: 'password(6 characters minimum)', class: 'border-0 w-full py-4' %>
+  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'password', class: 'border-0 w-full py-4' %>
+  <%= f.submit "SIGN UP", class: 'bg-green-600 w-full text-white py-6' %>
+<% end %>
+</section>
+
+

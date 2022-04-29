@@ -1,0 +1,8 @@
+<section class="flex flex-col pt-16 h-screen">
+  <%= form_with model: @type, class: 'flex flex-col items-start w-full grow' do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.text_field :icon, placeholder: 'Icon link', required: true, class: 'border-0 w-full py-4 border-b border-gray-300' %>
+    <%= f.text_field :name, placeholder: 'Name', required: true, class: 'border-0 w-full py-4' %>
+    <%= f.submit "Add new type", class: 'bg-green-600 w-full text-white py-6' %>
+  <% end %>
+</section>

@@ -1,0 +1,17 @@
+<section class="pt-16">
+  <div class="flex justify-between items-center bg-white p-6 font-bold">
+    <span>total amount spent</span>
+    <span>$<%= @spendings.sum(:amount) %></span>
+  </div>
+  <ul class="pt-4 pb-40 container mx-auto w-[95%] grow overflow-auto flex flex-col gap-4">
+    <% @spendings.each do |spending| %>
+      <li class="shadow-lg p-4 flex justify-between items-start gap-3 bg-white">
+        <span class=""><%= spending.name %></span>
+        <span class="">$<%= spending.amount %></span>
+      </li>
+    <% end %>
+  </ul>
+  <div class="bg-green-600 py-8 flex items-center justify-center fixed w-full bottom-0 left-0">
+    <%= link_to "Add new spending", new_type_spending_path, class: 'border py-4 px-8 text-white uppercase' %>
+  </div>
+</section>
