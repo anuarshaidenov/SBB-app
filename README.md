@@ -2,9 +2,11 @@
 
 > **_Spendit_** is a mobile web application where you can manage your budget. Register, add a spending type and keep track of your spendings for each category. It's that simple.
 
-<img src="./splash-screen.png" width="30%">
-<img src="./types-screen.png" width="30%">
-<img src="./spendings-screen.png" width="30%">
+<div style="display:flex">
+  <img src="./splash-screen.png" width="30%">
+  <img src="./types-screen.png" width="30%">
+  <img src="./spendings-screen.png" width="30%">
+</div>
 
 ## Live Link
 
